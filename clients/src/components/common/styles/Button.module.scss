@@ -1,0 +1,56 @@
+@use "../../../assets/styles/variables" as *;
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  margin-right: 10px;
+}
+.button:last-child {
+  margin-right: 0;
+}
+
+.button:hover {
+  opacity: $opacity-hover;
+}
+
+.primary {
+  background-color: blue;
+  color: white;
+}
+
+.secondary {
+  background-color: gray;
+  color: black;
+}
+
+.outline {
+  background: transparent;
+  border: 2px solid blue;
+  color: blue;
+}
+
+.large {
+  padding: 14px 28px;
+  font-size: 18px;
+}
+
+.small {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.login {
+  font-weight: 600;
+  background: transparent;
+  border: 2px solid $button-primary;
+  color: $button-primary;
+}
+
+.register {
+  font-weight: 600;
+  background: $button-primary;
+  color: $button-secondary;
+}

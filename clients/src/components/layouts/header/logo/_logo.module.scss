@@ -1,0 +1,17 @@
+@use "../../../../assets/styles/mixins" as *;
+@use "../../../../assets/styles/variables" as *;
+.logo {
+  @include flex-items;
+}
+.img_logo {
+  border-radius: 50%;
+}
+.logo_name {
+  font-family: "Dancing Script", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  padding: 0px 10px;
+  text-transform: lowercase;
+  font-size: $font-large;
+  font-weight: bold;
+}

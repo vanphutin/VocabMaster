@@ -1,5 +1,11 @@
+import HeaderLayout from "./components/layouts/header/HeaderLayout";
+
 function App() {
-  return <>hello world</>;
+  return (
+    <>
+      <HeaderLayout />
+    </>
+  );
 }
 
 export default App;

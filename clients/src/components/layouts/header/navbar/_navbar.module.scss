@@ -1,0 +1,62 @@
+@use "../../../../assets/styles/mixins" as *;
+@use "../../../../assets/styles/variables" as *;
+@use "../../../../assets/styles/responive" as *;
+nav {
+  .navbar_item {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+
+    @include desktop {
+      flex-direction: row;
+      @include flex-center;
+    }
+
+    @include lg-desktop {
+      flex-direction: row;
+      @include flex-center;
+    }
+
+    .navbar_item-link {
+      padding: $padding-medium 0;
+      border-bottom: 1px solid #cccccc29;
+
+      @include desktop {
+        padding: 0 $padding-medium;
+        border-bottom: none;
+      }
+
+      @include lg-desktop {
+        padding: 0 $padding-medium;
+        border-bottom: none;
+      }
+
+      &:hover {
+        opacity: $opacity-hover;
+      }
+
+      .href {
+        text-decoration: none;
+        color: $text-primary;
+        position: relative;
+        padding-bottom: $padding-small;
+      }
+
+      .active {
+        opacity: 1;
+
+        &::before {
+          content: "";
+          display: block;
+          height: 2px;
+          width: 100%;
+          background: $background-gradient-end;
+          position: absolute;
+          bottom: 0;
+          opacity: $opacity-hover;
+          left: 0;
+        }
+      }
+    }
+  }
+}

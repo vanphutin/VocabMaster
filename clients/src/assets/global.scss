@@ -1,0 +1,25 @@
+@use "./styles/variables" as *;
+body {
+  background-color: $background-dark;
+  color: $text-primary;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+// Định nghĩa thêm nếu cần
+h1,
+h2,
+h3 {
+  color: $text-accent;
+}
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,50 @@
+// Color variables for the Puzzle accounting software interface
+
+// Background colors
+$background-dark: #101025; // Màu nền chính tối
+$background-gradient-start: #1a1a2e; // Bắt đầu gradient (đen/xám đậm)
+$background-gradient-end: #00d2b8; // Kết thúc gradient (xanh lá nhạt)
+
+// Header color
+$color-header-bg: #0c0e1d;
+
+// Text colors
+$text-primary: #ffffff; // Văn bản trắng (tiêu đề chính)
+$text-secondary: #7f8c9d; // Văn bản phụ xám nhạt
+$text-accent: #00d2b8; // Văn bản phụ màu xanh lá (như "Built native to Stripe")
+
+// Button colors
+$button-primary: #00d2b8; // Nút "Get started for free" (xanh lá nhạt)
+$button-secondary: #1e2a47; // Nút "Log in" (xám nhạt/xanh đậm)
+
+// Feature card colors
+$card-background: #2d3a4f; // Nền các thẻ chức năng
+
+// Chart and data colors
+$chart-blue: #00a3ff; // Màu biểu đồ cột
+$chart-purple: #9b59b6; // Màu vòng tròn biểu thị phần trăm
+$data-text: #7f8c9d; // Văn bản số liệu xám nhạt
+
+// Logo/icon colors
+$logo-accent: #00d2b8; // Màu logo/icon (xanh ngọc nhạt)
+
+// Font sizes
+$font-small: 12px;
+$font-base: 16px;
+$font-medium: 18px;
+$font-large: 24px;
+$font-xlarge: 32px;
+$font-xxlarge: 40px;
+
+// padding size
+
+$padding-small: 5px;
+$padding-xsmall: 10px;
+$padding-base: 16px;
+$padding-medium: 18px;
+$padding-large: 24px;
+$padding-xlarge: 32px;
+$padding-xxlarge: 40px;
+
+// opacity
+$opacity-hover: 0.6;
