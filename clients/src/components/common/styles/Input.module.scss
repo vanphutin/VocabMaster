@@ -1,0 +1,97 @@
+@use "../../../assets/styles/variables" as *;
+.inputWrapper {
+  &.error {
+    input {
+      border-color: #dc3545;
+    }
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  //   width: 100%;
+
+  label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    text-transform: capitalize;
+  }
+
+  input {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #2c2638;
+    color: $text-primary;
+
+    // Trạng thái focus
+    &:focus {
+      border: 2px solid;
+      border-color: #187be484; // Màu viền khi focus (xanh Bootstrap)
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); // Đổ bóng nhẹ
+    }
+
+    // Trạng thái hover
+    &:hover:not(:disabled) {
+      border-color: #999; // Viền đậm hơn khi hover
+    }
+
+    // Trạng thái disabled
+    &:disabled {
+      background-color: #f5f5f5; // Màu nền xám nhạt
+      border-color: #ddd; // Viền nhạt hơn
+      color: #888; // Chữ xám
+      cursor: not-allowed; // Con trỏ không cho phép
+    }
+
+    // Placeholder style
+    &::placeholder {
+      color: #aaa; // Màu nhạt cho placeholder
+      font-weight: 550;
+    }
+
+    &[type="checkbox"] {
+      width: 20px; // Kích thước checkbox
+      height: 20px; // Kích thước checkbox
+      max-width: none;
+      padding: 0;
+      margin-right: 0.5rem;
+      appearance: none; // Bỏ giao diện mặc định (tùy chọn)
+      border: 2px solid #ccc; // Viền rõ hơn
+      border-radius: 4px; // Bo góc nhẹ
+      cursor: pointer;
+
+      // Dấu check khi checked
+      &:checked {
+        background-color: #007bff;
+        border-color: #007bff;
+        position: relative;
+
+        // Tạo dấu check bằng ::after
+        &::after {
+          content: "\2713";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+          font-size: 14px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  // Responsive
+  @media (max-width: 768px) {
+    max-width: 100%; // Chiếm toàn chiều rộng trên mobile
+    input {
+      padding: 0.5rem; // Giảm padding trên mobile
+      font-size: 0.9rem; // Giảm kích thước chữ
+    }
+  }
+}

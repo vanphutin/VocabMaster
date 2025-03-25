@@ -1,10 +1,10 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
+import { Bounce, ToastContainer } from "react-toastify";
 import HeaderLayout from "../components/layouts/header/HeaderLayout";
 import HomePage from "../pages/HomePage";
-import { ToastContainer } from "react-toastify";
-import { Bounce } from "react-toastify";
+import RegisterPage from "../pages/RegisterPage";
 
-const AuthLayout = () => {
+const RootLayout = () => {
   return (
     <>
       <ToastContainer
@@ -24,10 +24,24 @@ const AuthLayout = () => {
     </>
   );
 };
-
+const UserAuthentication = () => {
+  return (
+    <div
+      className=""
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        minHeight: "100vh",
+      }}
+    >
+      <Outlet />
+    </div>
+  );
+};
 export const router = createBrowserRouter([
   {
-    element: <AuthLayout />,
+    element: <RootLayout />,
     children: [
       {
         element: <HeaderLayout />,
@@ -35,6 +49,15 @@ export const router = createBrowserRouter([
           {
             path: "/",
             element: <HomePage />,
+          },
+        ],
+      },
+      {
+        element: <UserAuthentication />,
+        children: [
+          {
+            path: "/register",
+            element: <RegisterPage />,
           },
         ],
       },

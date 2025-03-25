@@ -7,6 +7,31 @@
   font-size: 16px;
   transition: all 0.3s ease-in-out;
   margin-right: 10px;
+  width: 100%;
+
+  .icon {
+    display: inline-block;
+    align-items: center;
+    padding: 3px;
+  }
+
+  .loading_icon {
+    display: inline-block;
+    align-items: center;
+    padding: 3px;
+    animation: spin 1s linear infinite;
+    color: #007bff;
+    font-weight: 900;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 }
 .button:last-child {
   margin-right: 0;
@@ -28,8 +53,8 @@
 
 .outline {
   background: transparent;
-  border: 2px solid blue;
-  color: blue;
+  border: 1px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 
 .large {

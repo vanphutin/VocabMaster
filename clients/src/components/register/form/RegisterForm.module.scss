@@ -1,0 +1,96 @@
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/mixins" as *;
+@use "../../../assets/styles/responive" as *;
+.register {
+  padding: 0 15px 0;
+
+  .register_title {
+    font-size: $font-xxlarge;
+    text-align: left;
+  }
+  .register_account_exists {
+    font-size: $font-base;
+    display: flex;
+    text-align: left;
+    color: $text-secondary;
+  }
+
+  .register_form {
+    padding: 20px 0 0 0;
+
+    .fullname {
+      @include flex-between;
+
+      @include mobile {
+        display: block;
+
+        .distance {
+          margin: 10px 0;
+        }
+      }
+    }
+
+    .inputGroup {
+      margin: 10px 0;
+      &.password {
+        position: relative;
+
+        .icon_hidden_password {
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          transform: translateY(-50%);
+          cursor: pointer;
+          color: #666;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .btn_group {
+      width: 100%;
+    }
+  }
+
+  .social_login {
+    margin-top: 15px;
+    text-align: center;
+
+    .btn_group {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+
+      @include mobile {
+        display: inline-block;
+        .distance {
+          margin: 10px 0;
+        }
+      }
+    }
+    .methods {
+      @include flex-center;
+      position: relative;
+      color: $text-secondary;
+      font-size: 14px;
+      margin: 20px 0;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 33%;
+        height: 2px;
+        background-color: $text-secondary;
+      }
+
+      &::before {
+        left: 0;
+      }
+
+      &::after {
+        right: 0;
+      }
+    }
+  }
+}

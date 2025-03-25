@@ -1,0 +1,34 @@
+@use "../../../assets/styles/variables" as *;
+.banner-img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+  position: relative;
+  z-index: 999;
+  .img {
+    width: 100%;
+    border-radius: $border-radius;
+    height: 70%;
+    object-fit: fill;
+  }
+
+  .back-home {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #9f219f6d;
+    cursor: pointer;
+    border-radius: $xborder-radius;
+    display: flex;
+    text-align: center;
+
+    &:hover {
+      background-color: #9f219fe2;
+    }
+
+    span {
+      color: #fff;
+      padding: 10px 15px;
+    }
+  }
+}

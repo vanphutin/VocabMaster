@@ -7,6 +7,7 @@ body {
   font-style: normal;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 p,
@@ -22,4 +23,10 @@ h3 {
 }
 a {
   text-decoration: none;
+}
+
+.error_field {
+  color: red;
+  font-size: 12px;
+  text-align: left;
 }
